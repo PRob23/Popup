@@ -20,6 +20,7 @@ class MainScreenViewModel
 
     fun testPopup() {
         viewModelScope.launch {
+            _state.value = MainScreenState(isButtonEnabled = false)
             _state.value = MainScreenState(popupResult = popupUseCase())
         }
     }

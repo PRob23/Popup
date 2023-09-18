@@ -40,7 +40,7 @@ fun MainScreen(
                 )
         ) {
             Content(
-                state.popupResult,
+                state,
                 onTestButtonClicked
             )
         }
@@ -49,7 +49,7 @@ fun MainScreen(
 
 @Composable
 private fun ColumnScope.Content(
-    popupResult: PopupResult?,
+    state: MainScreenState,
     onTestButtonClicked: () -> Unit
 ) {
     Spacer(
@@ -66,7 +66,7 @@ private fun ColumnScope.Content(
     )
     Text(
         modifier = Modifier.fillMaxWidth(),
-        text = when(popupResult) {
+        text = when(state.popupResult) {
             PopupResult.OK -> stringResource(id = R.string.main_setup_screen_instruction_popup_ok)
             PopupResult.NOT_OK -> stringResource(id = R.string.main_setup_screen_instruction_popup_not_ok)
             null -> ""
@@ -79,7 +79,8 @@ private fun ColumnScope.Content(
     )
     Button(
         modifier = Modifier.fillMaxWidth(),
-        onClick = onTestButtonClicked
+        onClick = onTestButtonClicked,
+        enabled = state.isButtonEnabled
     ) {
         Text(
             text = stringResource(id = R.string.main_setup_screen_test)
