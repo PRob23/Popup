@@ -12,8 +12,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.robertpapp.popup.domain.service.PopupService
 import com.robertpapp.popup.presentation.components.PopupUser
+import com.robertpapp.popup.domain.PopupService
 import com.robertpapp.popup.presentation.main.MainScreen
 import com.robertpapp.popup.presentation.main.MainScreenViewModel
 import com.robertpapp.popup.presentation.theme.PopupGenyoTheme

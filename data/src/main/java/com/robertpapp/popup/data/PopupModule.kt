@@ -1,4 +1,4 @@
-package com.robertpapp.popup.data.di
+package com.robertpapp.popup.data
 
 import com.robertpapp.popup.data.service.PopupServiceImpl
 import com.robertpapp.popup.domain.PopupService
