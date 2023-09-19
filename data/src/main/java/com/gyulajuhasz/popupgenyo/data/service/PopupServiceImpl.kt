@@ -9,8 +9,10 @@ import javax.inject.Inject
 import kotlin.coroutines.resume
 
 class PopupServiceImpl
-@Inject internal constructor() : PopupService {
-    override suspend fun showPopupForResult(activity: Activity): PopupResult =
+@Inject internal constructor(
+    private val activity: Activity
+) : PopupService {
+    override suspend fun showPopupForResult(): PopupResult =
         suspendCancellableCoroutine { continuation ->
             AlertDialog.Builder(activity)
                 .setTitle("POPUP")

@@ -5,10 +5,11 @@ import com.gyulajuhasz.popupgenyo.domain.service.PopupService
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.android.components.ViewModelComponent
 
 @Module
-@InstallIn(ViewModelComponent::class)
+@InstallIn(ActivityComponent::class)
 interface PopupModule {
 
     @Binds
