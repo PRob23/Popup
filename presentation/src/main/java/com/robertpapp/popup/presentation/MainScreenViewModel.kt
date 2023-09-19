@@ -1,4 +1,4 @@
-package com.robertpapp.popup.presentation.main
+package com.robertpapp.popup.presentation
 
 import android.app.Activity
 import androidx.compose.runtime.State
@@ -7,14 +7,16 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.robertpapp.popup.domain.model.PopupResult
 import com.robertpapp.popup.domain.use_case.PopupUseCase
-import com.robertpapp.popup.presentation.components.PopupUser
+import com.robertpapp.popup.presentation.main.MainScreenState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class MainScreenViewModel
-@Inject constructor(private val popupUseCase: PopupUseCase) : ViewModel() {
+@Inject constructor(
+    private val popupUseCase: PopupUseCase
+) : ViewModel() {
 
     private val _state = mutableStateOf(MainScreenState(popupResult = null))
     val state: State<MainScreenState> = _state

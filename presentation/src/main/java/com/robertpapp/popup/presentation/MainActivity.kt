@@ -1,5 +1,6 @@
 package com.robertpapp.popup.presentation
 
+import android.app.Activity
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -7,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.compose.NavHost
@@ -38,11 +40,12 @@ class MainActivity : ComponentActivity() {
                             route = Screen.MainScreen.route
                         ) {
                             val viewModel: MainScreenViewModel = hiltViewModel()
+                            val context = LocalContext.current
 
                             MainScreen(
                                 state = viewModel.state.value,
                                 onTestButtonClicked = {
-                                    showPopupForResult(viewModel)
+                                    viewModel.testPopup(context as? Activity)
                                 }
                             )
                         }
@@ -52,9 +55,4 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    private fun showPopupForResult(popupUser: PopupUser) {
-        lifecycleScope.launch {
-            popupUser.onPopupResult(popupService.showPopupForResult())
-        }
-    }
 }
