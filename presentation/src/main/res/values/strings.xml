@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Popup Genyo</string>
+    <string name="app_name">Popup Test</string>
 
     <string name="navigate_back_content_description">Back</string>
 
     <string name="main_setup_screen_instruction_1">Press the button to test the popup</string>
     <string name="main_setup_screen_instruction_popup_ok">Popup succeeded</string>
-    <string name="main_setup_screen_instruction_popup_not_ok">Popup was genyo, it failed</string>
+    <string name="main_setup_screen_instruction_popup_not_ok">Popup failed</string>
     <string name="main_setup_screen_test">Test</string>
 
 </resources>

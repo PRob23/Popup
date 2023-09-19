@@ -3,17 +3,17 @@ import org.gradle.api.JavaVersion
 object Config {
 
     object AppInfo {
-        const val NAME_SPACE = "com.gyulajuhasz.popupgenyo"
-        const val APPLICATION_ID = "com.gyulajuhasz.popupgenyo"
+        const val NAME_SPACE = "com.robertpapp.popup"
+        const val APPLICATION_ID = "com.robertpapp.popup"
         const val VERSION_CODE = 1
         const val VERSION_NAME = "1.0"
     }
 
     object NameSpaces {
-        const val APP = "com.gyulajuhasz.popupgenyo"
-        const val DATA = "com.gyulajuhasz.popupgenyo.data"
-        const val DOMAIN = "com.gyulajuhasz.popupgenyo.domain"
-        const val PRESENTATION = "com.gyulajuhasz.popupgenyo.presentation"
+        const val APP = "com.robertpapp.popup"
+        const val DATA = "com.robertpapp.popup.data"
+        const val DOMAIN = "com.robertpapp.popup.domain"
+        const val PRESENTATION = "com.robertpapp.popup.presentation"
     }
 
     object SdkVersions {

@@ -3,7 +3,7 @@
           xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:name="com.gyulajuhasz.popupgenyo.PopupGenyoApplication"
+        android:name="com.robertpapp.popup.PopupApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,7 +14,7 @@
         android:theme="@style/Theme.PopupGenyo"
         tools:targetApi="31">
         <activity
-            android:name="com.gyulajuhasz.popupgenyo.presentation.MainActivity"
+            android:name="com.robertpapp.popup.presentation.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.PopupGenyo">
             <intent-filter>
